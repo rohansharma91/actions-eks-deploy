@@ -1,0 +1,16 @@
+name: Node JS apply to EKS
+on: 
+    push: 
+        branches: [ "main"]
+    pull_request:
+        branches: [ "main"]
+
+    workflow_dispatch:
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout stage
+              uses: actions/checkout@v4
+            
